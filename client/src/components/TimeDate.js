@@ -14,10 +14,10 @@ class TimeDate extends Component {
     return (
       <div className="time-date-section">
           <div className="cuurent-date">
-              <span>{currentDate}</span>
+              <span>{ currentDate }</span>
           </div>
           <div className="current-time">
-              <span>{currentHour}:{currentMin}</span>
+              <span><h1>{ currentHour }:{ currentMin }</h1></span>
           </div>
           <div className="hours-left">8.5 hours left until sunset at 7:21pm</div>
       </div>

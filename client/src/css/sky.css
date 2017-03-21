@@ -1,6 +1,6 @@
 /*  Bar BG */
 #daylight-bar {
-  height: 50px;
+  height: 30px;
   background: linear-gradient(to right,
     #00000c 0%,
     #40405c 10%,
@@ -13,7 +13,7 @@
 }
 
 #daylight-bar2 {
-  height: 50px;
+  height: 30px;
   background: linear-gradient(to right, #00000c 0%,#40405c 12%,#b1b5ea 20%,#94dfff 32%,#94dfff 46%,#94dfff 64%,#38a3d1 75%,#728a7c 80%,#c5752d 84%,#1e528e 89%,#1e528e 90%,#00000c 100%)
 };
 /* Sky Gradients */

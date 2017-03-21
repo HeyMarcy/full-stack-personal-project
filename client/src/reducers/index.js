@@ -1,0 +1,30 @@
+const initialState = {
+  "current-time": "10:30",
+  "weather": "Overcast",
+  "temperature_string": "47.7 F (8.7 C)",
+  "temp_f": 47.7,
+  "temp_c": 8.7,
+  "relative_humidity": "70%",
+  "wind_string": "From the NNE at 5.6 MPH Gusting to 11.2 MPH",
+  "wind_dir": "NNE",
+  "wind_degrees": 15,
+  "wind_mph": 5.6,
+  "wind_gust_mph": "11.2",
+  "display_location":
+    {
+    "full": "Chicago, IL",
+    "city": "Chicago",
+    "state": "IL",
+    "magic": "1",
+  },
+  "sunrise":"7:27:02 AM",
+  "sunset":"5:05:55 PM",
+  "solar_noon":"12:16:28 PM",
+  "day_length":"9:38:53",
+  "civil_twilight_begin":"6:58:14 AM",
+  "civil_twilight_end":"5:34:43 PM",
+  "nautical_twilight_begin":"6:25:47 AM",
+  "nautical_twilight_end":"6:07:10 PM",
+  "astronomical_twilight_begin":"5:54:14 AM",
+  "astronomical_twilight_end":"6:38:43 PM"
+}
