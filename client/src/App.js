@@ -1,22 +1,28 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import TimeDate from './components/TimeDate';
-import Widget from './components/Widget';
-import Location from './components/Location';
+import Widgets from './components/Widgets';
+import CurrentLoc from './components/CurrentLoc';
 import DayMeter from './components/DayMeter';
 
 import './css/index.css';
 import './css/sky.css';
 
-
+import * as actions from './actions'
 
 class App extends Component {
+
+  componentDidMount() {
+    this.props.dispatch(actions.fetchData());
+  }
+
   render() {
     return (
       <div className="app">
         <div className="container">
           <TimeDate />
-          <Location />
-          <Widget />
+          <CurrentLoc />
+          <Widgets />
         </div>
         <DayMeter />
       </div>
@@ -24,4 +30,5 @@ class App extends Component {
   }
 }
 
-export default App;
+
+export default connect()(App);

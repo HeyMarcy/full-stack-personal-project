@@ -1,28 +1,32 @@
+
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../css/index.css';
-const todaysDate = new Date();
-const currentDate = todaysDate.toDateString()
-const currentHour = todaysDate.getHours();
-const currentMin = todaysDate.getMinutes();
+
 
 
 class TimeDate extends Component {
-  constructor(props){
-    super(props);
-  }
   render(){
     return (
       <div className="time-date-section">
-          <div className="cuurent-date">
-              <span>{ currentDate }</span>
+          <div className="curent-date">
+              <span>{ this.props.day }, { this.props.month } { this.props.date } </span>
           </div>
           <div className="current-time">
-              <span><h1>{ currentHour }:{ currentMin }</h1></span>
+              <span><h1>{ this.props.hour }:{ this.props.minutes }</h1></span>
           </div>
-          <div className="hours-left">8.5 hours left until sunset at 7:21pm</div>
+
       </div>
     )
   }
 }
 
-export default TimeDate;
+const mapStateToProps = (state, props) => ({
+    hour: state.hour,
+    minutes: state.minutes,
+    day: state.day,
+    month: state.month,
+    date: state.date
+});
+
+export default connect(mapStateToProps)(TimeDate);

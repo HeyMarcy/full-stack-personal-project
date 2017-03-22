@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import WidgetTemp from './widget-temp';
 import WidgetWind from './widget-wind';
-import WidgetPrecip from './widget-precip';
 import '../css/index.css';
 
-
-class Widget extends Component {
+class Widgets extends Component {
   constructor(props){
     super(props);
   }
@@ -14,10 +12,9 @@ class Widget extends Component {
       <div className="widget-section">
           <WidgetTemp />
           <WidgetWind />
-          <WidgetPrecip />
       </div>
     )
   }
 }
 
-export default Widget;
+export default Widgets;

@@ -1,30 +1,57 @@
+import {CURRENT_TIME, CURRENT_DATE, SUNSET, CURRENT_LOC, FETCH_DATA_SUCCESS} from '../actions/index';
+
+ import { parseTime } from '../utility.js';
+
+
+// const myApi = "http://api.wunderground.com/api/fbb8fb3eb8e05269"
+
+// Write a function to create the initial state
+// in a format that's more usable?
+//
+
+
+//how to inject
+
+
 const initialState = {
-  "current-time": "10:30",
+  "hour": 1,
+  "minutes":45,
+  "day":"Wednesday",
+  "month": "March",
+  "date": 22,
   "weather": "Overcast",
-  "temperature_string": "47.7 F (8.7 C)",
-  "temp_f": 47.7,
-  "temp_c": 8.7,
-  "relative_humidity": "70%",
-  "wind_string": "From the NNE at 5.6 MPH Gusting to 11.2 MPH",
-  "wind_dir": "NNE",
-  "wind_degrees": 15,
-  "wind_mph": 5.6,
-  "wind_gust_mph": "11.2",
-  "display_location":
-    {
-    "full": "Chicago, IL",
-    "city": "Chicago",
-    "state": "IL",
-    "magic": "1",
-  },
-  "sunrise":"7:27:02 AM",
-  "sunset":"5:05:55 PM",
-  "solar_noon":"12:16:28 PM",
-  "day_length":"9:38:53",
-  "civil_twilight_begin":"6:58:14 AM",
-  "civil_twilight_end":"5:34:43 PM",
-  "nautical_twilight_begin":"6:25:47 AM",
-  "nautical_twilight_end":"6:07:10 PM",
-  "astronomical_twilight_begin":"5:54:14 AM",
-  "astronomical_twilight_end":"6:38:43 PM"
+  "temp_f": 34.2,
+  "low": 29,
+  "high": 36,
+  "sunriseHour": 6,
+  "sunriseMinutes": 52,
+  "sunsetHour": 7,
+  "sunsetMinutes": 5,
+  "wind_dir": "NE",
+  "wind_degrees": 35,
+  "wind_mph": 3.7,
+  "wind_gust_mph": 9.3,
+  "locationCity": "Chicago",
+  "locationState": "IL",
+  "background": "sky-gradient-10"
 }
+
+export const weatherReducer = (state=initialState, action) => {
+  switch(action.type){
+    case CURRENT_TIME:
+      return {...state, hour:action.hour, minutes:action.minutes};
+    case CURRENT_DATE:
+      return {...state, day:action.day, month:action.month, date:action.date};
+    case SUNSET:
+      return {...state, sunsetHour:action.sunsetHour, sunsetMinutes:action.sunsetMinutes};
+    case CURRENT_LOC:
+    return {...state, locationCity:action.locationCity, locationState:action.locationState};
+    case FETCH_DATA_SUCCESS:
+      console.log(action.payload)
+      return {...state, locationCity: action.payload.moon_phase.ageOfMoon}
+
+
+    default:
+    return state;
+  }
+};

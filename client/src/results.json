@@ -1,0 +1,560 @@
+{
+    "response": {
+        "version": "0.1",
+        "termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+        "features": {
+            "astronomy": 1,
+            "conditions": 1
+        }
+    },
+    "current_observation": {
+        "image": {
+            "url": "http://icons.wxug.com/graphics/wu2/logo_130x80.png",
+            "title": "Weather Underground",
+            "link": "http://www.wunderground.com"
+        },
+        "display_location": {
+            "full": "Chicago, IL",
+            "city": "Chicago",
+            "state": "IL",
+            "state_name": "Illinois",
+            "country": "US",
+            "country_iso3166": "US",
+            "zip": "60290",
+            "magic": "1",
+            "wmo": "99999",
+            "latitude": "41.95999908",
+            "longitude": "-87.87999725",
+            "elevation": "198.4"
+        },
+        "observation_location": {
+            "full": "George Street, Franklin Park, Illinois",
+            "city": "George Street, Franklin Park",
+            "state": "Illinois",
+            "country": "US",
+            "country_iso3166": "US",
+            "latitude": "41.935368",
+            "longitude": "-87.880905",
+            "elevation": "656 ft"
+        },
+        "estimated": {},
+        "station_id": "KILFRANK2",
+        "observation_time": "Last Updated on March 22, 11:26 AM CDT",
+        "observation_time_rfc822": "Wed, 22 Mar 2017 11:26:25 -0500",
+        "observation_epoch": "1490199985",
+        "local_time_rfc822": "Wed, 22 Mar 2017 11:36:46 -0500",
+        "local_epoch": "1490200606",
+        "local_tz_short": "CDT",
+        "local_tz_long": "America/Chicago",
+        "local_tz_offset": "-0500",
+        "weather": "Mostly Cloudy",
+        "temperature_string": "34.2 F (1.2 C)",
+        "temp_f": 34.2,
+        "temp_c": 1.2,
+        "relative_humidity": "57%",
+        "wind_string": "From the NE at 3.7 MPH Gusting to 9.3 MPH",
+        "wind_dir": "NE",
+        "wind_degrees": 35,
+        "wind_mph": 3.7,
+        "wind_gust_mph": "9.3",
+        "wind_kph": 6,
+        "wind_gust_kph": "15.0",
+        "pressure_mb": "1036",
+        "pressure_in": "30.60",
+        "pressure_trend": "+",
+        "dewpoint_string": "20 F (-6 C)",
+        "dewpoint_f": 20,
+        "dewpoint_c": -6,
+        "heat_index_string": "NA",
+        "heat_index_f": "NA",
+        "heat_index_c": "NA",
+        "windchill_string": "31 F (-1 C)",
+        "windchill_f": "31",
+        "windchill_c": "-1",
+        "feelslike_string": "31 F (-1 C)",
+        "feelslike_f": "31",
+        "feelslike_c": "-1",
+        "visibility_mi": "10.0",
+        "visibility_km": "16.1",
+        "solarradiation": "--",
+        "UV": "3",
+        "precip_1hr_string": "-999.00 in ( 0 mm)",
+        "precip_1hr_in": "-999.00",
+        "precip_1hr_metric": " 0",
+        "precip_today_string": "0.00 in (0 mm)",
+        "precip_today_in": "0.00",
+        "precip_today_metric": "0",
+        "icon": "mostlycloudy",
+        "icon_url": "http://icons.wxug.com/i/c/k/mostlycloudy.gif",
+        "forecast_url": "http://www.wunderground.com/US/IL/Chicago.html",
+        "history_url": "http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KILFRANK2",
+        "ob_url": "http://www.wunderground.com/cgi-bin/findweather/getForecast?query=41.935368,-87.880905",
+        "nowcast": ""
+    },
+    "moon_phase": {
+        "percentIlluminated": "31",
+        "ageOfMoon": "24",
+        "phaseofMoon": "Waning Crescent",
+        "hemisphere": "North",
+        "current_time": {
+            "hour": "11",
+            "minute": "36"
+        },
+        "sunrise": {
+            "hour": "6",
+            "minute": "50"
+        },
+        "sunset": {
+            "hour": "19",
+            "minute": "06"
+        },
+        "moonrise": {
+            "hour": "3",
+            "minute": "28"
+        },
+        "moonset": {
+            "hour": "13",
+            "minute": "30"
+        }
+    },
+    "sun_phase": {
+        "sunrise": {
+            "hour": "6",
+            "minute": "50"
+        },
+        "sunset": {
+            "hour": "19",
+            "minute": "06"
+        }
+    }
+}
+
+
+astronomy/forcast
+http://api.wunderground.com/api/fbb8fb3eb8e05269/astronomy/forecast/q/IL/Chicago.json
+
+{
+"response": {
+"version": "0.1",
+"termsofService": "http://www.wunderground.com/weather/api/d/terms.html",
+"features": {
+"astronomy": 1,
+"forecast": 1
+}
+},
+"forecast": {
+"txt_forecast": {
+"date": "10:06 AM CDT",
+"forecastday": [
+{
+"period": 0,
+"icon": "clear",
+"icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+"title": "Wednesday",
+"fcttext": "A mix of clouds and sun. High 36F. Winds ENE at 10 to 20 mph.",
+"fcttext_metric": "Partly cloudy. High 2C. Winds ENE at 15 to 30 km/h.",
+"pop": "0"
+},
+{
+"period": 1,
+"icon": "nt_clear",
+"icon_url": "http://icons.wxug.com/i/c/k/nt_clear.gif",
+"title": "Wednesday Night",
+"fcttext": "Mainly clear. Low 29F. Winds ESE at 5 to 10 mph.",
+"fcttext_metric": "A few passing clouds. Low -2C. Winds ESE at 10 to 15 km/h.",
+"pop": "10"
+},
+{
+"period": 2,
+"icon": "cloudy",
+"icon_url": "http://icons.wxug.com/i/c/k/cloudy.gif",
+"title": "Thursday",
+"fcttext": "Cloudy skies. High 48F. Winds SSE at 10 to 20 mph.",
+"fcttext_metric": "Overcast. High 9C. Winds SSE at 15 to 30 km/h.",
+"pop": "10"
+},
+{
+"period": 3,
+"icon": "nt_chancetstorms",
+"icon_url": "http://icons.wxug.com/i/c/k/nt_chancetstorms.gif",
+"title": "Thursday Night",
+"fcttext": "Scattered thunderstorms in the evening, with mostly cloudy skies overnight. Low near 45F. Winds S at 10 to 20 mph. Chance of rain 40%.",
+"fcttext_metric": "Scattered thunderstorms in the evening, with mostly cloudy skies overnight. Low 7C. Winds S at 15 to 30 km/h. Chance of rain 40%.",
+"pop": "40"
+},
+{
+"period": 4,
+"icon": "partlycloudy",
+"icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+"title": "Friday",
+"fcttext": "Mostly cloudy skies early will become partly cloudy later in the day. High 73F. Winds SW at 15 to 25 mph.",
+"fcttext_metric": "Mostly cloudy skies early will become partly cloudy later in the day. High 23C. Winds SW at 25 to 40 km/h.",
+"pop": "20"
+},
+{
+"period": 5,
+"icon": "nt_rain",
+"icon_url": "http://icons.wxug.com/i/c/k/nt_rain.gif",
+"title": "Friday Night",
+"fcttext": "Cloudy with periods of rain. Thunder possible. Low around 50F. SSW winds shifting to NNE at 10 to 15 mph. Chance of rain 90%.",
+"fcttext_metric": "Cloudy with periods of rain. Thunder possible. Low around 10C. SSW winds shifting to NNE at 15 to 25 km/h. Chance of rain 90%.",
+"pop": "90"
+},
+{
+"period": 6,
+"icon": "rain",
+"icon_url": "http://icons.wxug.com/i/c/k/rain.gif",
+"title": "Saturday",
+"fcttext": "Periods of rain. Thunder possible. High 52F. Winds ENE at 10 to 15 mph. Chance of rain 90%.",
+"fcttext_metric": "Cloudy with periods of rain. Thunder possible. High 11C. Winds ENE at 15 to 25 km/h. Chance of rain 90%.",
+"pop": "90"
+},
+{
+"period": 7,
+"icon": "nt_rain",
+"icon_url": "http://icons.wxug.com/i/c/k/nt_rain.gif",
+"title": "Saturday Night",
+"fcttext": "Cloudy with periods of rain. Low around 50F. Winds E at 10 to 15 mph. Chance of rain 80%. Rainfall around a quarter of an inch.",
+"fcttext_metric": "Occasional rain. Low near 10C. Winds E at 15 to 25 km/h. Chance of rain 80%. Rainfall near 6mm.",
+"pop": "80"
+}
+]
+},
+"simpleforecast": {
+"forecastday": [
+{
+"date": {
+"epoch": "1490227200",
+"pretty": "7:00 PM CDT on March 22, 2017",
+"day": 22,
+"month": 3,
+"year": 2017,
+"yday": 80,
+"hour": 19,
+"min": "00",
+"sec": 0,
+"isdst": "1",
+"monthname": "March",
+"monthname_short": "Mar",
+"weekday_short": "Wed",
+"weekday": "Wednesday",
+"ampm": "PM",
+"tz_short": "CDT",
+"tz_long": "America/Chicago"
+},
+"period": 1,
+"high": {
+"fahrenheit": "36",
+"celsius": "2"
+},
+"low": {
+"fahrenheit": "29",
+"celsius": "-2"
+},
+"conditions": "Clear",
+"icon": "clear",
+"icon_url": "http://icons.wxug.com/i/c/k/clear.gif",
+"skyicon": "",
+"pop": 0,
+"qpf_allday": {
+"in": 0,
+"mm": 0
+},
+"qpf_day": {
+"in": 0,
+"mm": 0
+},
+"qpf_night": {
+"in": 0,
+"mm": 0
+},
+"snow_allday": {
+"in": 0,
+"cm": 0
+},
+"snow_day": {
+"in": 0,
+"cm": 0
+},
+"snow_night": {
+"in": 0,
+"cm": 0
+},
+"maxwind": {
+"mph": 20,
+"kph": 32,
+"dir": "ENE",
+"degrees": 64
+},
+"avewind": {
+"mph": 14,
+"kph": 23,
+"dir": "ENE",
+"degrees": 64
+},
+"avehumidity": 47,
+"maxhumidity": 0,
+"minhumidity": 0
+},
+{
+"date": {
+"epoch": "1490313600",
+"pretty": "7:00 PM CDT on March 23, 2017",
+"day": 23,
+"month": 3,
+"year": 2017,
+"yday": 81,
+"hour": 19,
+"min": "00",
+"sec": 0,
+"isdst": "1",
+"monthname": "March",
+"monthname_short": "Mar",
+"weekday_short": "Thu",
+"weekday": "Thursday",
+"ampm": "PM",
+"tz_short": "CDT",
+"tz_long": "America/Chicago"
+},
+"period": 2,
+"high": {
+"fahrenheit": "48",
+"celsius": "9"
+},
+"low": {
+"fahrenheit": "45",
+"celsius": "7"
+},
+"conditions": "Overcast",
+"icon": "cloudy",
+"icon_url": "http://icons.wxug.com/i/c/k/cloudy.gif",
+"skyicon": "",
+"pop": 10,
+"qpf_allday": {
+"in": 0.01,
+"mm": 0
+},
+"qpf_day": {
+"in": 0,
+"mm": 0
+},
+"qpf_night": {
+"in": 0.01,
+"mm": 0
+},
+"snow_allday": {
+"in": 0,
+"cm": 0
+},
+"snow_day": {
+"in": 0,
+"cm": 0
+},
+"snow_night": {
+"in": 0,
+"cm": 0
+},
+"maxwind": {
+"mph": 20,
+"kph": 32,
+"dir": "SSE",
+"degrees": 154
+},
+"avewind": {
+"mph": 14,
+"kph": 23,
+"dir": "SSE",
+"degrees": 154
+},
+"avehumidity": 49,
+"maxhumidity": 0,
+"minhumidity": 0
+},
+{
+"date": {
+"epoch": "1490400000",
+"pretty": "7:00 PM CDT on March 24, 2017",
+"day": 24,
+"month": 3,
+"year": 2017,
+"yday": 82,
+"hour": 19,
+"min": "00",
+"sec": 0,
+"isdst": "1",
+"monthname": "March",
+"monthname_short": "Mar",
+"weekday_short": "Fri",
+"weekday": "Friday",
+"ampm": "PM",
+"tz_short": "CDT",
+"tz_long": "America/Chicago"
+},
+"period": 3,
+"high": {
+"fahrenheit": "73",
+"celsius": "23"
+},
+"low": {
+"fahrenheit": "50",
+"celsius": "10"
+},
+"conditions": "Partly Cloudy",
+"icon": "partlycloudy",
+"icon_url": "http://icons.wxug.com/i/c/k/partlycloudy.gif",
+"skyicon": "",
+"pop": 20,
+"qpf_allday": {
+"in": 0.34,
+"mm": 9
+},
+"qpf_day": {
+"in": 0,
+"mm": 0
+},
+"qpf_night": {
+"in": 0.33,
+"mm": 8
+},
+"snow_allday": {
+"in": 0,
+"cm": 0
+},
+"snow_day": {
+"in": 0,
+"cm": 0
+},
+"snow_night": {
+"in": 0,
+"cm": 0
+},
+"maxwind": {
+"mph": 25,
+"kph": 40,
+"dir": "SW",
+"degrees": 218
+},
+"avewind": {
+"mph": 18,
+"kph": 29,
+"dir": "SW",
+"degrees": 218
+},
+"avehumidity": 61,
+"maxhumidity": 0,
+"minhumidity": 0
+},
+{
+"date": {
+"epoch": "1490486400",
+"pretty": "7:00 PM CDT on March 25, 2017",
+"day": 25,
+"month": 3,
+"year": 2017,
+"yday": 83,
+"hour": 19,
+"min": "00",
+"sec": 0,
+"isdst": "1",
+"monthname": "March",
+"monthname_short": "Mar",
+"weekday_short": "Sat",
+"weekday": "Saturday",
+"ampm": "PM",
+"tz_short": "CDT",
+"tz_long": "America/Chicago"
+},
+"period": 4,
+"high": {
+"fahrenheit": "52",
+"celsius": "11"
+},
+"low": {
+"fahrenheit": "50",
+"celsius": "10"
+},
+"conditions": "Rain",
+"icon": "rain",
+"icon_url": "http://icons.wxug.com/i/c/k/rain.gif",
+"skyicon": "",
+"pop": 90,
+"qpf_allday": {
+"in": 0.53,
+"mm": 13
+},
+"qpf_day": {
+"in": 0.24,
+"mm": 6
+},
+"qpf_night": {
+"in": 0.29,
+"mm": 7
+},
+"snow_allday": {
+"in": 0,
+"cm": 0
+},
+"snow_day": {
+"in": 0,
+"cm": 0
+},
+"snow_night": {
+"in": 0,
+"cm": 0
+},
+"maxwind": {
+"mph": 15,
+"kph": 24,
+"dir": "ENE",
+"degrees": 77
+},
+"avewind": {
+"mph": 11,
+"kph": 18,
+"dir": "ENE",
+"degrees": 77
+},
+"avehumidity": 91,
+"maxhumidity": 0,
+"minhumidity": 0
+}
+]
+}
+},
+"moon_phase": {
+"percentIlluminated": "31",
+"ageOfMoon": "24",
+"phaseofMoon": "Waning Crescent",
+"hemisphere": "North",
+"current_time": {
+"hour": "11",
+"minute": "54"
+},
+"sunrise": {
+"hour": "6",
+"minute": "50"
+},
+"sunset": {
+"hour": "19",
+"minute": "06"
+},
+"moonrise": {
+"hour": "3",
+"minute": "28"
+},
+"moonset": {
+"hour": "13",
+"minute": "30"
+}
+},
+"sun_phase": {
+"sunrise": {
+"hour": "6",
+"minute": "50"
+},
+"sunset": {
+"hour": "19",
+"minute": "06"
+}
+}
+}
