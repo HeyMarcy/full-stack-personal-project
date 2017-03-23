@@ -4,6 +4,8 @@ import TimeDate from './components/TimeDate';
 import Widgets from './components/Widgets';
 import CurrentLoc from './components/CurrentLoc';
 import DayMeter from './components/DayMeter';
+import { parseTime } from './utility.js';
+
 
 import './css/index.css';
 import './css/sky.css';
@@ -14,6 +16,7 @@ class App extends Component {
 
   componentDidMount() {
     this.props.dispatch(actions.fetchData());
+    this.props.dispatch(actions.currentTime());
   }
 
   render() {
