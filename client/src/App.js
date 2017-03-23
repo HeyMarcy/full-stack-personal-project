@@ -6,7 +6,7 @@ import Widgets from './components/Widgets';
 import CurrentLoc from './components/CurrentLoc';
 import DayMeter from './components/DayMeter';
 
-import './css/sky2.css';
+import './css/sky.css';
 import './css/index.css';
 
 import * as actions from './actions'
@@ -22,7 +22,7 @@ componentDidMount() {
   render() {
     return (
       <div className="app">
-        <div className={`sky-gradient-${this.props.hour}`}>
+        <div className={`bg sky-gradient-${this.props.hour}`}>
           <div className="container">
 
             <TimeDate />

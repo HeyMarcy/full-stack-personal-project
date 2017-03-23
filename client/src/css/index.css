@@ -1,4 +1,5 @@
-body {
+body,
+.app {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -31,8 +32,25 @@ button {
   border: none;
 }
 
-.app {
-  padding-top:20px;
+
+
+.app{
+  height:100vh;
+}
+
+.bg {
+  height:100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
 }
 .hours-left {
   font-size: 12px;
@@ -44,7 +62,7 @@ button {
 .container {
   color: #fff;
   margin:0 auto;
-  padding-bottom: 100px;
+  padding: 50px;
   text-align: center;
   display: flex;
   flex-direction: column;
