@@ -9,15 +9,16 @@ const WidgetTemp = (props) => {
   return (
     <div className="widget">
       <span className="current-temp">{ props.temp }</span>
-      <span className="hi-low-temp">{ props.low } | { props.high }</span>
+      <span className="hi-low-temp">{ props.lowTemp } | { props.highTemp }</span>
     </div>
   );
 };
 
 const mapStateToProps = (state, props) => ({
-  temp: state.temp_f,
-  low: state.low,
-  high: state.high
+    temp: state.temp_f,
+    low: state.lowTemp,
+    high:state.highTemp
 });
+
 
 export default connect(mapStateToProps)(WidgetTemp);

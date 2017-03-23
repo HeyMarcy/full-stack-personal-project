@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import { parseTime } from '../utility.js';
 
 export const CURRENT_DATE = 'CURRENT_DATE';
@@ -45,12 +44,13 @@ export const currentTime = () => ({
 // });
 //
 //
-// export const CURRENT_TEMP = 'CURRENT_TEMP';
-// export const currentTemp = (temp,low, high) => ({
-//     type: CURRENT_TEMP,
-//     low,
-//     high
-// });
+export const CURRENT_TEMP = 'CURRENT_TEMP';
+export const currentTemp = (temp,low, high) => ({
+    type: CURRENT_TEMP,
+    temp,
+    low,
+    high
+});
 //
 // export const CURRENT_LOC = 'CURRENT_LOC';
 // export const CurrentLoc = (locationCity, locationState) => ({
