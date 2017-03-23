@@ -1,26 +1,27 @@
 import {CURRENT_TIME, FETCH_DATA_SUCCESS, FETCH_SKY_SUCCESS} from '../actions/index';
 
 const initialState = {
-  "hour": "",
-  "minutes":"",
-  "day":"",
-  "month": "",
-  "dayOfMonth": "",
-  "weather": "Overcast",
-  "temp_f": 34.2,
-  "low": 29,
-  "high": 36,
-  "sunriseHour": 6,
-  "sunriseMinutes": 52,
-  "sunsetHour": 7,
-  "sunsetMinutes": 5,
-  "wind_dir": "NE",
-  "wind_degrees": 35,
-  "wind_mph": 3.7,
-  "wind_gust_mph": 9.3,
-  "locationCity": "Chicago",
-  "locationState": "IL",
-  "background": "sky-gradient-10"
+  hour: "",
+  minutes:"",
+  day:"",
+  month: "",
+  dayOfMonth: "",
+  weather: "Overcast",
+  temp_f: 34.2,
+  low: 29,
+  high: 36,
+  sunriseHour: 6,
+  sunriseMinutes: 52,
+  timeToSunset: "",
+  sunset: 7,
+  wind_dir: "NE",
+  wind_degrees: 35,
+  wind_mph: 3.7,
+  wind_gust_mph: 9.3,
+  wind_degrees:"",
+  city: "Chicago",
+  state: "IL",
+
 }
 
 export const weatherReducer = (state=initialState, action) => {
@@ -31,14 +32,24 @@ export const weatherReducer = (state=initialState, action) => {
     case FETCH_DATA_SUCCESS:
       console.log(action.payload);
       return {...state,
+        city: action.payload.current_observation.display_location.city,
+        state: action.payload.current_observation.display_location.state,
         month: action.payload.forecast.simpleforecast.forecastday[0].date.monthname,
         day: action.payload.forecast.simpleforecast.forecastday[0].date.weekday,
         dayOfMonth: action.payload.forecast.simpleforecast.forecastday[0].date.day,
+        temp_f: action.payload.current_observation.temp_f,
+        low: action.payload.forecast.simpleforecast.forecastday[0].low.fahrenheit,
+        high: action.payload.forecast.simpleforecast.forecastday[0].high.fahrenheit,
+        wind_mph: action.payload.current_observation.wind_mph,
+        wind_dir: action.payload.current_observation.wind_dir,
+        wind_gust_mph:action.payload.current_observation.wind_gust_mph,
+        wind_degrees:action.payload.current_observation.wind_degrees,
+
       }
     case FETCH_SKY_SUCCESS:
       console.log(action.results);
       return {...state,
-        // sunrise: action.results.sunrise,
+      sunrise: action.results.sunset
         // sunset: action.results.sunset,
         // day_length: action.results.day_length,
         // solar_noon: action.results.solar_noon,

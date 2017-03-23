@@ -7,15 +7,15 @@ import '../css/index.css';
 const CurrentLoc = (props) => {
   return (
     <div className="location-section">
-        <div className="current-location">{ props.locationCity}, {props.locationState}</div>
+        <div className="current-location">{ props.city}, {props.state}</div>
         <button className="change-loc">change</button>
     </div>
   )
 }
 
 const mapStateToProps = (state, props) => ({
-    locationCity: state.locationCity,
-    locationState: state.locationState
+    city: state.city,
+    state: state.state
 });
 
 export default connect(mapStateToProps)(CurrentLoc);

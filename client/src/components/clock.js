@@ -4,8 +4,6 @@ import { connect } from 'react-redux';
 
 import '../css/index.css';
 
-
-
 class Clock extends React.Component {
   componentDidMount() {
     this.timerID = setInterval(
@@ -26,7 +24,6 @@ class Clock extends React.Component {
     return (
       <div>
         <span><h1>{ this.props.hour }:{ this.props.minutes }</h1></span>
-
       </div>
     );
   }

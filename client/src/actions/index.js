@@ -1,4 +1,5 @@
 
+import { connect } from 'react-redux';
 
 export const CURRENT_TIME = 'CURRENT_TIME';
 export const currentTime = (hour, minutes, date) => ({
@@ -36,17 +37,19 @@ export const fetchSkyError = ( error) => ({
     error
 });
 
-export const PAINT_SKY = 'PAINT_SKY';
-export const paintSky = (hour, background ) => ({
-    type: FETCH_SKY_SUCCESS,
-    hour,
-    background
-});
+// export function getWeather(state, city) {
+//   const url = `${WEATHER_URL}&q=${city},us&appid=${API_KEY}`; // template string ES6 syntax
+//   const request = axios.get(url); // ajax request, returns a promise
+//
+//   return {
+//     type: GET_WEATHER,
+//     payload: request
+//   };
+// }
 
 
-
-export const fetchData = () => dispatch => {
-    const url = `http://api.wunderground.com/api/fbb8fb3eb8e05269/astronomy/forecast/q/IL/Chicago.json`;
+export const fetchData = (city="chicago", state="IL") => dispatch => {
+    const url = `http://api.wunderground.com/api/fbb8fb3eb8e05269/conditions/forecast/q/${state}/${city}/.json`;
     return fetch(url).then(response => {
         if (!response.ok) {
             const error = new Error(response.statusText)
