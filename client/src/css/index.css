@@ -43,7 +43,8 @@ button {
 
 .container {
   color: #fff;
-  margin:0 auto 20px;
+  margin:0 auto;
+  padding-bottom: 100px;
   text-align: center;
   display: flex;
   flex-direction: column;

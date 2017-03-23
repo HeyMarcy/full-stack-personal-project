@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Clock from './components/clock';
 import TimeDate from './components/TimeDate';
 import Widgets from './components/Widgets';
 import CurrentLoc from './components/CurrentLoc';
@@ -14,17 +15,18 @@ class App extends Component {
 
 componentDidMount() {
     this.props.dispatch(actions.fetchData());
+    this.props.dispatch(actions.fetchSky());
 }
 
   render() {
     return (
       <div className="app">
         <div className="container">
+
           <TimeDate />
           <CurrentLoc />
           <Widgets />
         </div>
-        <DayMeter />
       </div>
     );
   }

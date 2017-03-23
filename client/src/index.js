@@ -5,10 +5,11 @@ import store from './store';
 
 import App from './App';
 
+
 ReactDOM.render(
   <Provider store={store}>
     <div className="sky-gradient-14">
-      <App />
+    <App />
     </div>
   </Provider>,
   document.getElementById('root')

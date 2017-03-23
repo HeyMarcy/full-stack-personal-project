@@ -9,15 +9,15 @@ const WidgetTemp = (props) => {
   return (
     <div className="widget">
       <span className="current-temp">{ props.temp }</span>
-      <span className="hi-low-temp">{ props.lowTemp } | { props.highTemp }</span>
+      <span className="hi-low-temp">{ props.low } | { props.high }</span>
     </div>
   );
 };
 
 const mapStateToProps = (state, props) => ({
-    temp: state.temp_f,
-    low: state.lowTemp,
-    high:state.highTemp
+    temp:state.temp_f,
+    low: state.low,
+    high:state.high
 });
 
 

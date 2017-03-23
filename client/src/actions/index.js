@@ -1,70 +1,14 @@
-import axios from 'axios';
-import { parseTime } from '../utility.js';
-
-export const CURRENT_DATE = 'CURRENT_DATE';
-export const currentDate = (day, month, date) => ({
-    type: CURRENT_DATE,
-    day,
-    month,
-    date
-});
 
 
 export const CURRENT_TIME = 'CURRENT_TIME';
-export const currentTime = () => ({
+export const currentTime = (hour, minutes, date) => ({
     type: CURRENT_TIME,
-    hour: parseTime.hour,
-    minutes: parseTime.minutes,
+    date,
+    hour,
+    minutes,
 });
 
 
-//
-// export const SUNSET = 'SUNSET';
-// export const sunset = (sunsetHour, sunsetMinutes) => ({
-//     type: SUNSET,
-//     sunsetHour,
-//     sunsetMinutes
-// });
-//
-// export const SUNRISE = 'SUNRISE';
-// export const sunrise = (sunriseHour, sunriseMinutes) => ({
-//     type: SUNRISE,
-//     sunriseHour,
-//     sunriseMinutes
-// });
-//
-//
-// export const WIND = 'WIND';
-// export const wind = (windMPH, windDir, windDeg,windGust) => ({
-//     type: WIND,
-//     windMPH,
-//     windDir,
-//     windDeg,
-//     windGust
-// });
-//
-//
-export const CURRENT_TEMP = 'CURRENT_TEMP';
-export const currentTemp = (temp,low, high) => ({
-    type: CURRENT_TEMP,
-    temp,
-    low,
-    high
-});
-//
-// export const CURRENT_LOC = 'CURRENT_LOC';
-// export const CurrentLoc = (locationCity, locationState) => ({
-//     type: CURRENT_LOC,
-//     locationCity,
-//     locationState
-// });
-//
-// // if 'sunsetHour' isn't changing do I need to export it?
-//
-// export const HOURS_OF_SUN = 'HOURS_OF_SUN';
-// export const hoursOfSun = () => ({
-//     type: HOURS_OF_SUN,
-// });
 
 export const FETCH_DATA_SUCCESS = 'FETCH_DATA_SUCCESS';
 export const fetchDataSuccess = (payload) => ({
@@ -79,6 +23,21 @@ export const fetchDataError = ( error) => ({
     error
 });
 
+export const FETCH_SKY_SUCCESS = 'FETCH_SKY_SUCCESS';
+export const fetchSkySuccess = ( results ) => ({
+    type: FETCH_SKY_SUCCESS,
+    results
+
+});
+
+export const FETCH_SKY_ERROR= 'FETCH_SKY_ERROR';
+export const fetchSkyError = ( error) => ({
+    type: FETCH_SKY_ERROR,
+    error
+});
+
+
+
 
 export const fetchData = () => dispatch => {
     const url = `http://api.wunderground.com/api/fbb8fb3eb8e05269/astronomy/forecast/q/IL/Chicago.json`;
@@ -90,12 +49,20 @@ export const fetchData = () => dispatch => {
         }
         return response.json();
         console.log(response.json);
-
     })
     .then(data => dispatch(fetchDataSuccess(data)))
-
 };
 
-
-///  what to do wit the response?
-//
+export const fetchSky = () => dispatch => {
+    const url = `http://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=today`;
+    return fetch(url).then(response => {
+        if (!response.ok) {
+            const error = new Error(response.statusText)
+            error.response = response
+            throw error;
+        }
+        return response.json();
+        console.log(response.json);
+    })
+    .then(data => dispatch(fetchSkySuccess(data)))
+};

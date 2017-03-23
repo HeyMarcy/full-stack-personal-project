@@ -1,14 +1,11 @@
-import {CURRENT_TIME, CURRENT_TEMP, FETCH_DATA_SUCCESS} from '../actions/index';
-
- import { parseTime } from '../utility.js';
-
+import {CURRENT_TIME, FETCH_DATA_SUCCESS, FETCH_SKY_SUCCESS} from '../actions/index';
 
 const initialState = {
-  "hour": 1,
-  "minutes":45,
+  "hour": "",
+  "minutes":"",
   "day":"",
   "month": "",
-  "date": "",
+  "dayOfMonth": "",
   "weather": "Overcast",
   "temp_f": 34.2,
   "low": 29,
@@ -29,18 +26,24 @@ const initialState = {
 export const weatherReducer = (state=initialState, action) => {
   switch(action.type){
     case CURRENT_TIME:
-      return {...state, hour:action.hour, minutes:action.minutes};
-    // case CURRENT_DATE:
-    //   return {...state, day:action.day, month:action.month, date:action.date};
-    case CURRENT_TEMP:
-      return {...state, temp:action.temp_f, low:action.low, high:action.high};
+      return {...state, date:action.date, hour:action.hour, minutes:action.minutes};
 
     case FETCH_DATA_SUCCESS:
       console.log(action.payload);
       return {...state,
         month: action.payload.forecast.simpleforecast.forecastday[0].date.monthname,
         day: action.payload.forecast.simpleforecast.forecastday[0].date.weekday,
-        date: action.payload.forecast.simpleforecast.forecastday[0].date.day,
+        dayOfMonth: action.payload.forecast.simpleforecast.forecastday[0].date.day,
+      }
+    case FETCH_SKY_SUCCESS:
+      console.log(action.results);
+      return {...state,
+        // sunrise: action.results.sunrise,
+        // sunset: action.results.sunset,
+        // day_length: action.results.day_length,
+        // solar_noon: action.results.solar_noon,
+        // nautical_twilight_begin: action.results.nautical_twilight_begin,
+        // nautical_twilight_end: action.results.nautical_twilight_end,
       }
 
 
