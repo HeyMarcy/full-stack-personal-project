@@ -36,6 +36,12 @@ export const fetchSkyError = ( error) => ({
     error
 });
 
+export const PAINT_SKY = 'PAINT_SKY';
+export const paintSky = (hour, background ) => ({
+    type: FETCH_SKY_SUCCESS,
+    hour,
+    background
+});
 
 
 

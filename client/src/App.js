@@ -6,10 +6,11 @@ import Widgets from './components/Widgets';
 import CurrentLoc from './components/CurrentLoc';
 import DayMeter from './components/DayMeter';
 
+import './css/sky2.css';
 import './css/index.css';
-import './css/sky.css';
 
 import * as actions from './actions'
+
 
 class App extends Component {
 
@@ -21,15 +22,20 @@ componentDidMount() {
   render() {
     return (
       <div className="app">
-        <div className="container">
+        <div className={`sky-gradient-${this.props.hour}`}>
+          <div className="container">
 
-          <TimeDate />
-          <CurrentLoc />
-          <Widgets />
+            <TimeDate />
+            <CurrentLoc />
+            <Widgets />
+          </div>
         </div>
       </div>
     );
   }
 }
 
-export default connect()(App);
+const mapStateToProps = ({hour, minutes})=>({hour, minutes})
+
+
+export default connect(mapStateToProps)(App);
