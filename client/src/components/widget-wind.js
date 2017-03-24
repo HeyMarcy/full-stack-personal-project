@@ -7,8 +7,8 @@ import '../css/index.css';
 const WidgetWind = (props) => {
   return (
     <div className="widget widget-wind">
-      <div><span className="temp">{props.windMPH}</span> mph</div>
-      <div>{props.windDir} direction</div>
+      <div><span className="temp">{props.windMPH}</span> <small>mph</small></div>
+      <div>{props.windDir}</div>
 
     </div>
   );

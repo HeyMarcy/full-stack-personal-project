@@ -12,7 +12,7 @@ class TimeDate extends Component {
         <div className="current-time">
           <Clock  />
         </div>
-        <div className="curent-date">
+        <div className="curent-date light">
               <span>{ this.props.day }, { this.props.month } { this.props.dayOfMonth } </span>
           </div>
 

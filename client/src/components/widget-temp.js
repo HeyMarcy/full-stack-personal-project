@@ -7,7 +7,7 @@ const WidgetTemp = (props) => {
   return (
     <div className="widget">
       <h6 className="current-temp">{ props.temp }</h6>
-      <span className="hi-low-temp">{ props.low } | { props.high }</span>
+      <p>{ props.low } <span className="light"> &nbsp;|&nbsp; </span> { props.high }</p>
     </div>
   );
 };

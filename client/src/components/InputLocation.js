@@ -7,7 +7,8 @@ import '../css/index.css';
 const CurrentLoc = (props) => {
   return (
     <div className="location-section">
-        <button className="change-loc">{ props.city}, {props.stateName} </button>
+        <div className="current-location">{ props.city}, {props.stateName}</div>
+        <button className="change-loc">change</button>
     </div>
 
   )
