@@ -23,9 +23,8 @@ componentDidMount() {
       <div className="app">
         <div className={`bg sky-gradient-${this.props.hour}`}>
           <div className="container">
-
-            <TimeDate />
             <CurrentLoc />
+            <TimeDate />
             <Widgets />
           </div>
         </div>

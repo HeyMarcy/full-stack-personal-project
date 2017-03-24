@@ -5,14 +5,17 @@ import '../css/index.css';
 
 class TimeDate extends Component {
   render(){
+
+
     return (
       <div className="time-date-section">
-          <div className="curent-date">
+        <div className="current-time">
+          <Clock  />
+        </div>
+        <div className="curent-date">
               <span>{ this.props.day }, { this.props.month } { this.props.dayOfMonth } </span>
           </div>
-          <div className="current-time">
-            <Clock  />
-          </div>
+
       </div>
     )
   }

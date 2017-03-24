@@ -9,7 +9,7 @@ const WidgetWind = (props) => {
     <div className="widget widget-wind">
       <div><span className="temp">{props.windMPH}</span> mph</div>
       <div>{props.windDir} direction</div>
-      <div>{props.windGust} mph</div>
+
     </div>
   );
 };
