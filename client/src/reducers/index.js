@@ -20,7 +20,7 @@ const initialState = {
   wind_gust_mph: 9.3,
   wind_degrees:"",
   city: "Chicago",
-  stateName: "",
+  stateName: "IL",
 
 }
 

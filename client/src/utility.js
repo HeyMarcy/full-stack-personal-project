@@ -14,19 +14,18 @@
 //   };
 // }
 
-const formatMins = (mins) => {
+formatMins(mins) {
   if ( mins < 10 ){ mins = "0"+mins }
   else { mins }
   return mins;
 }
 
-const formatHours= (hrs) => {
-  let h = hrs;
-  if (h >= 12){
-    h = hrs-12;
-  };
-  if (h === 0){
-    h = 12
-  };
-  return h;
-};
+formatHours(hrs) {
+   let h = hrs;
+   if (h >= 12){h = hrs-12};
+   if (h === 0){h = 12};
+   return h;
+ }
+
+export formatHours;
+export formatMins;
