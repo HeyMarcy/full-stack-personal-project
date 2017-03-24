@@ -37,19 +37,9 @@ export const fetchSkyError = ( error) => ({
     error
 });
 
-// export function getWeather(state, city) {
-//   const url = `${WEATHER_URL}&q=${city},us&appid=${API_KEY}`; // template string ES6 syntax
-//   const request = axios.get(url); // ajax request, returns a promise
-//
-//   return {
-//     type: GET_WEATHER,
-//     payload: request
-//   };
-// }
-
 
 export const fetchData = (city="chicago", stateName="IL") => dispatch => {
-    const url = `http://api.wunderground.com/api/fbb8fb3eb8e05269/conditions/forecast/q/${stateName}/${city}/.json`;
+    const url = `https://api.wunderground.com/api/fbb8fb3eb8e05269/conditions/forecast/q/${stateName}/${city}/.json`;
     return fetch(url).then(response => {
         if (!response.ok) {
             const error = new Error(response.statusText)
@@ -72,7 +62,7 @@ export const fetchData = (city="chicago", stateName="IL") => dispatch => {
 
 
 export const fetchSky = () => dispatch => {
-    const url = `http://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=today`;
+    const url = `https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=today`;
     return fetch(url).then(response => {
         if (!response.ok) {
             const error = new Error(response.statusText)

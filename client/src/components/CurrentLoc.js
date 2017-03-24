@@ -10,6 +10,7 @@ const CurrentLoc = (props) => {
         <div className="current-location">{ props.city}, {props.stateName}</div>
         <button className="change-loc">change</button>
     </div>
+
   )
 }
 
