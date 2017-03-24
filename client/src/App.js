@@ -4,13 +4,12 @@ import Clock from './components/clock';
 import TimeDate from './components/TimeDate';
 import Widgets from './components/Widgets';
 import CurrentLoc from './components/CurrentLoc';
-import DayMeter from './components/DayMeter';
 
 import './css/sky.css';
 import './css/index.css';
+// import './css/knockout-stylesheet.css';
 
 import * as actions from './actions'
-
 
 class App extends Component {
 

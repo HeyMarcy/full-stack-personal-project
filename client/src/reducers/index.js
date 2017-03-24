@@ -7,9 +7,9 @@ const initialState = {
   month: "",
   dayOfMonth: "",
   weather: "Overcast",
-  temp_f: 34.2,
-  low: 29,
-  high: 36,
+  temp_f: "",
+  low: "",
+  high: "",
   sunriseHour: 6,
   sunriseMinutes: 52,
   timeToSunset: "",
@@ -20,7 +20,7 @@ const initialState = {
   wind_gust_mph: 9.3,
   wind_degrees:"",
   city: "Chicago",
-  state: "IL",
+  stateName: "",
 
 }
 
@@ -33,7 +33,7 @@ export const weatherReducer = (state=initialState, action) => {
       console.log(action.payload);
       return {...state,
         city: action.payload.current_observation.display_location.city,
-        state: action.payload.current_observation.display_location.state,
+        stateName: action.payload.current_observation.display_location.state,
         month: action.payload.forecast.simpleforecast.forecastday[0].date.monthname,
         day: action.payload.forecast.simpleforecast.forecastday[0].date.weekday,
         dayOfMonth: action.payload.forecast.simpleforecast.forecastday[0].date.day,

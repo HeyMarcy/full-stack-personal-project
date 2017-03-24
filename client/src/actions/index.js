@@ -48,8 +48,8 @@ export const fetchSkyError = ( error) => ({
 // }
 
 
-export const fetchData = (city="chicago", state="IL") => dispatch => {
-    const url = `http://api.wunderground.com/api/fbb8fb3eb8e05269/conditions/forecast/q/${state}/${city}/.json`;
+export const fetchData = (city="chicago", stateName="IL") => dispatch => {
+    const url = `http://api.wunderground.com/api/fbb8fb3eb8e05269/conditions/forecast/q/${stateName}/${city}/.json`;
     return fetch(url).then(response => {
         if (!response.ok) {
             const error = new Error(response.statusText)
@@ -61,6 +61,15 @@ export const fetchData = (city="chicago", state="IL") => dispatch => {
     })
     .then(data => dispatch(fetchDataSuccess(data)))
 };
+
+// const mapStateToProps = (state, props) => ({
+//     state: state.state,
+//     city: state.city
+// });
+//
+//
+// export connect(mapStateToProps)(fetchData);
+
 
 export const fetchSky = () => dispatch => {
     const url = `http://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400&date=today`;

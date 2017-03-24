@@ -7,7 +7,7 @@ import '../css/index.css';
 const CurrentLoc = (props) => {
   return (
     <div className="location-section">
-        <div className="current-location">{ props.city}, {props.state}</div>
+        <div className="current-location">{ props.city}, {props.stateName}</div>
         <button className="change-loc">change</button>
     </div>
   )
@@ -15,7 +15,7 @@ const CurrentLoc = (props) => {
 
 const mapStateToProps = (state, props) => ({
     city: state.city,
-    state: state.state
+    stateName: state.stateName
 });
 
 export default connect(mapStateToProps)(CurrentLoc);
