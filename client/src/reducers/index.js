@@ -1,8 +1,8 @@
 import {CURRENT_TIME, FETCH_DATA_SUCCESS, FETCH_SKY_SUCCESS} from '../actions/index';
 
 const initialState = {
-  hour: "",
-  minutes:"",
+  hour: "23",
+  minutes:"32",
   day:"",
   month: "",
   dayOfMonth: "",

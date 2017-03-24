@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import Clock from './components/clock';
 import TimeDate from './components/TimeDate';
 import Widgets from './components/Widgets';
-import CurrentLoc from './components/CurrentLoc';
+import HoldLoc from './components/HoldLoc';
 
 import './css/sky.css';
 import './css/index.css';
@@ -23,7 +23,7 @@ componentDidMount() {
       <div className="app">
         <div className={`bg sky-gradient-${this.props.hour}`}>
           <div className="container">
-            <CurrentLoc />
+            <HoldLoc />
             <TimeDate />
             <Widgets />
           </div>

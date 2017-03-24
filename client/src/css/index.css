@@ -47,6 +47,7 @@ button {
   line-height: 1;
   letter-spacing: .1rem;
   font-weight: 100;
+  margin: 10px 20px;
 }
 @media (max-width: 600px) {
   .location-section {
@@ -54,6 +55,7 @@ button {
     display: flex;
   }
   button {
+    margin: auto;
 margin-bottom: 20px;
 margin-top:-50px;
   }
@@ -90,7 +92,7 @@ margin-top:-50px;
   font-family: "acumin-pro", "Lato", sans-serif;
   color: #fff;
   margin:0 auto;
-  padding: 50px;
+  padding: 0px;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -121,7 +123,7 @@ margin-top:-50px;
 font-family: acumin-pro, sans-serif;
 font-style: normal;
 font-weight: 200;
-margin-bottom:0px;
+margin:3px auto 0px auto;
 }
 
 
@@ -141,5 +143,5 @@ margin-bottom:0px;
 }
 
 .widget-section {
-  margin: 10px auto;
+  margin: 20px auto;
 }
