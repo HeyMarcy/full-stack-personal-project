@@ -6,10 +6,10 @@ import '../css/index.css';
 
 const WidgetWind = (props) => {
   return (
-    <div className="widget">
-      <div className="wind-widget">{props.windMPH}<small>mph</small></div>
-      <div className="wind-widget">{props.windDir}<small> direction</small></div>
-      <div className="wind-widget">{props.windGust}<small>mph</small></div>
+    <div className="widget widget-wind">
+      <div><span className="temp">{props.windMPH}</span> mph</div>
+      <div>{props.windDir} direction</div>
+      <div>{props.windGust} mph</div>
     </div>
   );
 };

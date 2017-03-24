@@ -6,7 +6,7 @@ import '../css/index.css';
 const WidgetTemp = (props) => {
   return (
     <div className="widget">
-      <span className="current-temp">{ props.temp }</span>
+      <h6 className="current-temp">{ props.temp }</h6>
       <span className="hi-low-temp">{ props.low } | { props.high }</span>
     </div>
   );
