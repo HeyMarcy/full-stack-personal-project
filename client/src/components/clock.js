@@ -7,7 +7,7 @@ import '../css/index.css';
 
 class Clock extends React.Component {
     componentDidMount() {
-        this.timerID = setInterval(() => this.tick(), 100);
+        this.timerID = setInterval(() => this.tick(), 1000);
     }
     componentWillUnmount() {
         clearInterval(this.timerID);
@@ -17,22 +17,29 @@ class Clock extends React.Component {
         let date = new Date();
         this.props.dispatch(actions.currentTime(date.getHours(), date.getMinutes()));
     }
-    formatMins(mins) {
-      if ( mins < 10 ){ mins = "0"+mins }
-      else { mins }
-      return mins;
-    }
-
-    formatHours(hrs) {
-       let h = hrs;
-       if (h >= 12){h = hrs-12};
-       if (h === 0){h = 12};
-       return h;
-     }
 
     render() {
-      let minPretty =  this.formatMins.bind(this, this.props.minutes);
-      let hoursPretty = this.formatHours.bind(this, this.props.hour);
+////  format time to be, for example, 1:05PM  and not interfere with backro
+      const formatMins = (mins) => {
+        if ( mins < 10 ){ mins = "0"+mins }
+        else { mins }
+        return mins;
+      }
+
+      const formatHours= (hrs) => {
+        let h = hrs;
+        if (h >= 12){
+          h = hrs-12;
+        };
+        if (h === 0){
+          h = 12
+        };
+        return h;
+      };
+      //end format
+
+      let minPretty = formatMins(this.props.minutes);
+      let hoursPretty = formatHours(this.props.hour);
         return (
             <div>
                 <span>
